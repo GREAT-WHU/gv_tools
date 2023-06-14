@@ -1,5 +1,6 @@
 # gv_tools
 
-Ground-Vision Toolkit for inverse perspective mapping (IPM), ground feature processing and so on.
+Ground-Vision Toolkit for ground feature processing, inverse perspective mapping (IPM) and so on.
 
-*TODO*
+# Timeline
+- [ ] Upload code and test data sequences. *Deadline: July 15th*.
