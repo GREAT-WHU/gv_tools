@@ -1,0 +1,50 @@
+%YAML:1.0
+---
+
+imu_topic: "/imu0"
+image0_topic: "/cam0/image_raw"
+image1_topic: "/cam1/image_raw"
+
+cam0_calib: "cam0_pinhole.yaml"
+cam1_calib: "cam1_pinhole.yaml"
+
+IPM_WIDTH: 400
+IPM_HEIGHT: 1000
+IPM_RESO: 0.015
+
+priori_alpha: -0.15
+priori_theta: -1.15
+priori_H: 1.7803
+
+body_T_cam0: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: d
+   data: [ 0.99988370,-0.00563944,-0.01418468,-0.15590000,
+           0.01424932,0.01159187,0.99983149,0.63466000,
+           -0.00547407,-0.99991712,0.01167088,0.04605000,
+           0.00000000,0.00000000,0.00000000,1.00000000]
+
+body_T_cam1: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: d
+   data: [ 0.99996024,-0.00201794,-0.00863170,0.14395000,
+           0.00866529,0.01727883,0.99981269,0.63759000,
+           -0.00186842,-0.99984820,0.01729564,0.04528000,
+           0.00000000,0.00000000,0.00000000,1.00000000]
+
+enable_pitch_comp: 1
+pitch_comp_windowsize: 4.0
+
+feature_mode: 1 # 0: min dist-based; 1: grid-based
+
+# min dist-based
+min_dist_ground: 30 # 20 for highway
+max_cnt_ground: 40
+
+# grid-based
+grid_row: 8
+grid_col: 4
+grid_min_feature_num: 2
+grid_max_feature_num: 3

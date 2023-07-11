@@ -1,0 +1,15 @@
+<launch>
+
+    <arg name="verbosity"   default="INFO" /> <!-- ALL, DEBUG, INFO, WARNING, ERROR, SILENT -->
+    <arg name="config_path" default="$(find gv_tools)/config/carla/tracker.yaml" />
+    <node name="ground_tracker_node" pkg="gv_tools" type="ground_tracker_node" output="screen" clear_params="true" required="true">
+        <!-- master configuration object -->
+        <param name="config_path" type="string" value="$(arg config_path)" />
+    </node>
+
+    <node name="visualization" pkg="rviz" type="rviz" output="log"
+     args="-d $(find gv_tools)/config/tracker.rviz" />
+
+
+
+</launch>
