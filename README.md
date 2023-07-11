@@ -23,7 +23,7 @@ This toolkit fully utilizes the **camera-ground geometry** for accurate ground f
 ## Dataset
 This repo also provides the urban road visual-inertial dataset used in [Ground-VIO](https://arxiv.org/abs/2306.08341).
 
-The dataset contains both [Carla](https://github.com/carla-simulator/carla) simulated data sequences (S-A, S-B) and real-world data squences (R-A, R-B, R-C, R-D, R-E and R-F). The detail information is listed below. For real-world data sequences, the GT poses are obtained from the forward-and-backward smoothed solution of PPK/tactical-grade IMU integration
+The dataset contains both [Carla](https://github.com/carla-simulator/carla) simulated data sequences (S-A, S-B) and real-world data squences (R-A, R-B, R-C, R-D, R-E and R-F). The detail information is listed below. For real-world data sequences, the GT poses are obtained from the forward-and-backward smoothed solution of PPK/tactical-grade IMU integration.
 
 ### Simulation Data (Carla)
   | Sequence | Date | Length |Sensors |Features |Image |
@@ -69,7 +69,7 @@ roslaunch gv_tools track_carla_example.launch
 ```
 and a rviz viewer would be simultaneously launched.
 
-Then play the data bag in another terminal
+Then, play the data bag in another terminal
 ```Bash
 rosbag play s_a.bag
 ```
