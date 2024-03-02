@@ -60,7 +60,7 @@ namespace gv
 		{
 			ipmproc->updateCameraGroundGeometry(cur_cg);
 		}
-		cur_ipm = ipmproc->genIPM(cur_img);
+		cur_ipm = ipmproc->genIPM(cur_img, false);
 
 		if (!cur_img_semantic.empty())
 		{
@@ -70,7 +70,7 @@ namespace gv
 			cur_img_semantic.setTo(255, cur_img_semantic == 7);
 			cur_img_semantic.setTo(255, cur_img_semantic == 6);
 			cur_img_semantic.setTo(255, cur_img_semantic == 20);
-			cv::Mat cur_ipm_semantic = ipmproc->genIPM(cur_img_semantic);
+			cv::Mat cur_ipm_semantic = ipmproc->genIPM(cur_img_semantic, true);
 			mask.setTo(0, cur_ipm_semantic != 255);
 		}
 
