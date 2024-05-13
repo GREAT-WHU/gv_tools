@@ -92,8 +92,8 @@ namespace gv
 
     void CameraGroundGeometry::update(const Eigen::Matrix3d &R_c_cg, const double &h)
     {
-        double a = acos(R_c_cg(0, 0)) * 180 / M_PI;
-        double b = acos(R_c_cg(2, 2)) * 180 / M_PI;
+        double a = atan2(R_c_cg(1, 0),R_c_cg(0, 0)) * 180 / M_PI;
+        double b = atan2(R_c_cg(2, 1), R_c_cg(2, 2)) * 180 / M_PI;
         this->update(a, b, h);
     }
 
