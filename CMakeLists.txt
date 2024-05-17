@@ -3,8 +3,7 @@ cmake_minimum_required(VERSION 2.8.12)
 # Project name
 project(gv_tools)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -MP")
-add_compile_options(-MP)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 add_definitions(-DGLOG_NO_ABBREVIATED_SEVERITIES)
 add_definitions(-DNOMINMAX)
